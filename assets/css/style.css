@@ -1000,6 +1000,17 @@ ul {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.form-note-top {
+    background: rgba(46, 204, 113, 0.15);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
 /* ========================================
    Social Links Section
    ======================================== */
