@@ -1133,7 +1133,9 @@ ul {
     }
     
     #nav.active {
-        max-height: 500px;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     #nav ul {
