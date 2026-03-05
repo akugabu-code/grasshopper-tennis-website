@@ -154,13 +154,13 @@ ul {
 }
 
 #nav .btn-primary {
-    background: #6c757d;
-    color: var(--white);
-    border: 1px solid #5a6268;
+    background: transparent;
+    color: var(--dark-color);
+    border: 2px solid var(--dark-color);
 }
 
 #nav .btn-primary:hover {
-    background: #5a6268;
+    background: var(--dark-color);
     color: var(--white);
 }
 
