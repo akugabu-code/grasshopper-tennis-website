@@ -426,18 +426,23 @@ ul {
 }
 
 .event-info {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     flex: 1;
 }
 
 .event-info h3 {
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.3rem;
     color: var(--dark-color);
+    font-size: 1rem;
 }
 
 .event-info p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     font-size: 0.9rem;
+}
+
+.event-info p:last-child {
+    margin-bottom: 0;
 }
 
 .event-info i {
