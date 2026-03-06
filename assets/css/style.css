@@ -652,6 +652,9 @@ ul {
     border-radius: 15px;
     padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
 }
 
 .tournament-text-box p {
@@ -662,7 +665,7 @@ ul {
 .tournament-item {
     padding: var(--spacing-md);
     border-left: 4px solid var(--primary-color);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0;
     background: rgba(46, 204, 113, 0.05);
     border-radius: 8px;
 }
@@ -1329,6 +1332,10 @@ ul {
     /* Tournament Section */
     .subsection-title {
         font-size: 1.2rem;
+    }
+    
+    .tournament-text-box {
+        grid-template-columns: 1fr;
     }
     
     .tournament-item {
