@@ -648,13 +648,16 @@ ul {
 }
 
 .tournament-text-box {
-    background: var(--white);
-    border-radius: 15px;
-    padding: var(--spacing-md);
-    box-shadow: var(--shadow-md);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--spacing-md);
+}
+
+/* PC display: 2x2 grid */
+@media (min-width: 769px) {
+    .tournament-text-box {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 }
 
 .tournament-text-box p {
@@ -666,8 +669,9 @@ ul {
     padding: var(--spacing-md);
     border-left: 4px solid var(--primary-color);
     margin-bottom: 0;
-    background: rgba(46, 204, 113, 0.05);
-    border-radius: 8px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
 }
 
 .tournament-item:last-child {
@@ -1335,7 +1339,7 @@ ul {
     }
     
     .tournament-text-box {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     
     .tournament-item {
