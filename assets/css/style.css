@@ -676,18 +676,20 @@ ul {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
+    display: block;
 }
 
 .tournament-date {
     color: var(--gray-color);
     font-size: 0.9rem;
     font-weight: 400;
-    margin-left: 0.5rem;
+    margin-left: 0;
 }
 
 .tournament-result {
     color: var(--dark-color);
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
 }
 
 .tournament-item h4 {
@@ -717,7 +719,7 @@ ul {
    ======================================== */
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
 }
 
@@ -1314,6 +1316,27 @@ ul {
     /* Tournament Section */
     .subsection-title {
         font-size: 1.2rem;
+    }
+    
+    .tournament-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .tournament-name {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+    
+    .tournament-date {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tournament-result {
+        font-size: 0.9rem;
+        line-height: 1.7;
     }
     
     /* Form */
