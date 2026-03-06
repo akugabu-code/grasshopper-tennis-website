@@ -648,16 +648,9 @@ ul {
 }
 
 .tournament-text-box {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
-}
-
-/* PC display: 2x2 grid */
-@media (min-width: 769px) {
-    .tournament-text-box {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
 }
 
 .tournament-text-box p {
@@ -1339,7 +1332,7 @@ ul {
     }
     
     .tournament-text-box {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
     }
     
     .tournament-item {
