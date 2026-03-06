@@ -692,6 +692,19 @@ ul {
     line-height: 1.6;
 }
 
+.result-item {
+    display: inline;
+}
+
+.result-item::after {
+    content: " / ";
+    margin: 0 0.3rem;
+}
+
+.result-item:last-child::after {
+    content: "";
+}
+
 .tournament-item h4 {
     color: var(--dark-color);
     font-size: 1.3rem;
@@ -1337,6 +1350,25 @@ ul {
     .tournament-result {
         font-size: 0.9rem;
         line-height: 1.7;
+    }
+    
+    .result-item {
+        display: block;
+        padding-left: 1rem;
+        position: relative;
+        margin-bottom: 0.3rem;
+        text-align: left;
+    }
+    
+    .result-item::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+    }
+    
+    .result-item::after {
+        content: "";
+        margin: 0;
     }
     
     /* Form */
