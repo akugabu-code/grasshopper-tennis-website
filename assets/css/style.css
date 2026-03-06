@@ -1306,9 +1306,6 @@ ul {
         padding: 0.5rem 1.5rem;
         font-size: 0.9rem;
     }
-        justify-content: flex-start;
-        gap: var(--spacing-sm);
-    }
     
     /* Photo Grid */
     .photo-grid {
