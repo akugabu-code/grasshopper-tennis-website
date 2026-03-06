@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initEventPhotos(); // これが完了後にGLightboxを初期化
     initEventAccordions();
     initScrollAnimations();
+    initMonthTabs(); // 月タブの初期化
 });
 
 // ========================================
@@ -65,6 +66,33 @@ function initMobileMenu() {
             spans[1].style.opacity = '';
             spans[2].style.transform = '';
         }
+    });
+}
+
+// ========================================
+// Month Tabs for Event Calendar
+// ========================================
+function initMonthTabs() {
+    const tabs = document.querySelectorAll('.month-tab');
+    const contents = document.querySelectorAll('.month-content');
+    
+    if (!tabs.length || !contents.length) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const month = this.getAttribute('data-month');
+            
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(month + '-events');
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
     });
 }
 
