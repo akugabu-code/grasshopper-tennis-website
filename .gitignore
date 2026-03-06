@@ -50,3 +50,4 @@ temp/
 # Backup files
 *.bak
 *.backup
+image_backup_*/
