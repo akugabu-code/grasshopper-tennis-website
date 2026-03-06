@@ -175,7 +175,7 @@ ul {
     justify-content: center;
     background: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-        url('../images/hero/hero-bg.jpg') center/cover no-repeat;
+        url('../images/hero/1.jpg') center/cover no-repeat;
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
@@ -570,7 +570,7 @@ ul {
     position: relative;
     background: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-        url('../images/tournament-bg/tournament.jpg') center/cover no-repeat;
+        url('../images/tournament-bg/1.jpg') center/cover no-repeat;
     background-color: #f8f9fa;
 }
 
