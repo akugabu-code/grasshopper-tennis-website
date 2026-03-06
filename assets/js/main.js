@@ -354,7 +354,6 @@ function initEventPhotos() {
             link.href = imagePath;
             link.className = 'glightbox';
             link.dataset.gallery = month;
-            link.style.display = 'none';
             
             const img = document.createElement('img');
             img.src = imagePath;
@@ -369,17 +368,14 @@ function initEventPhotos() {
             link.appendChild(overlay);
             grid.appendChild(link);
             
-            img.onload = function() {
-                link.style.display = '';
-            };
-            
+            // Remove link if image fails to load
             img.onerror = function() {
                 link.remove();
             };
         }
     });
     
-    // GLightboxの初期化（遅延実行）
+    // Initialize GLightbox after a short delay to ensure all elements are in DOM
     setTimeout(() => {
         if (typeof GLightbox !== 'undefined') {
             const lightbox = GLightbox({
@@ -388,7 +384,7 @@ function initEventPhotos() {
                 autoplayVideos: true
             });
         }
-    }, 500);
+    }, 100);
 }
 
 // ========================================
