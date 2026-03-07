@@ -1,0 +1,12 @@
+image_backup_*/
+.git
+.gitignore
+compress-images.ps1
+*.bak
+*.backup
+*.tmp
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/

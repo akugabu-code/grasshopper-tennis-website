@@ -219,6 +219,41 @@ ul {
     flex-wrap: wrap;
 }
 
+/* Hero SNS Links */
+.hero-sns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+.hero-sns-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.hero-sns-btn.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.hero-sns-btn.line {
+    background: #06C755;
+}
+
+.hero-sns-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: var(--white);
+}
+
 /* ========================================
    Buttons
    ======================================== */
@@ -553,9 +588,51 @@ ul {
     margin-right: 0.5rem;
 }
 
+/* Adding badge for schedule */
+.adding-badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 0.55em;
+    font-weight: 700;
+    padding: 0.2em 0.7em;
+    border-radius: 50px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    animation: pulse-badge 1.5s ease-in-out infinite;
+    letter-spacing: 0.03em;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+.schedule-more-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+.schedule-more-note i {
+    margin-right: 0.3rem;
+}
+
 /* Event Accordion Styles */
+.accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
 .event-accordion {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0;
+}
+
+.event-accordion:has(.event-accordion-content.active) {
+    grid-column: 1 / -1;
 }
 
 .event-accordion-btn {
@@ -851,25 +928,26 @@ ul {
    Q&A Section
    ======================================== */
 .qa-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .qa-item {
     background: var(--white);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
-    margin-bottom: var(--spacing-sm);
+    border-radius: 8px;
+    margin-bottom: 0.4rem;
     overflow: hidden;
 }
 
 .qa-question {
-    padding: var(--spacing-md);
+    padding: 0.6rem 1rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: var(--transition);
     user-select: none;
 }
@@ -891,13 +969,14 @@ ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    padding: 0 var(--spacing-md);
+    padding: 0 1rem;
     background: var(--light-color);
+    font-size: 0.9rem;
 }
 
 .qa-item.active .qa-answer {
     max-height: 500px;
-    padding: var(--spacing-md);
+    padding: 0.6rem 1rem;
 }
 
 /* ========================================
@@ -1275,9 +1354,32 @@ ul {
         font-size: 2rem;
     }
     
-    /* About Grid */
+    /* About Grid - 2 columns compact */
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .about-card {
+        padding: 0.7rem 0.5rem;
+    }
+
+    .about-card h3 {
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .about-card p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
     }
     
     /* Calendar Grid */
@@ -1299,12 +1401,29 @@ ul {
     }
     
     .month-tabs {
-        gap: 0.5rem;
+        gap: 0.35rem;
+        flex-wrap: wrap;
     }
     
     .month-tab {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+    }
+
+    /* Event card compact */
+    .event-card {
+        border-radius: 8px;
+    }
+
+    .event-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .event-info p {
+        font-size: 0.8rem;
     }
     
     /* Photo Grid */
@@ -1312,52 +1431,162 @@ ul {
         grid-template-columns: 1fr;
     }
     
-    /* Members Grid */
+    /* Members Grid - 2 columns compact */
     .members-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .member-card {
+        padding: 0.6rem 0.4rem;
+    }
+
+    .member-photo {
+        width: 80px;
+        height: 80px;
+        border-width: 3px;
+        margin-bottom: 0.3rem;
+    }
+
+    .member-card h3 {
+        font-size: 0.85rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .member-furigana {
+        font-size: 0.7rem;
+        margin-top: -0.3rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .member-role {
+        font-size: 0.75rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .member-education {
+        font-size: 0.7rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .member-bio {
+        font-size: 0.7rem;
+        line-height: 1.4;
     }
     
-    /* Event Accordion */
+    /* Event Accordion - compact 2-column grid on mobile */
+    .accordion-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
+    }
+
+    .event-accordion {
+        margin-bottom: 0;
+    }
+
+    .event-accordion:has(.event-accordion-content.active) {
+        grid-column: 1 / -1;
+    }
+
     .event-accordion-btn {
-        font-size: 1rem;
-        padding: 1rem 1.25rem;
+        font-size: 0.72rem;
+        padding: 0.55rem 0.6rem;
+        border-radius: 8px;
+    }
+
+    .event-accordion-btn i.fa-calendar-alt {
+        display: none;
+    }
+
+    .event-accordion-btn i.fa-chevron-down {
+        font-size: 0.6rem;
+        flex-shrink: 0;
+    }
+
+    .event-accordion-btn span {
+        gap: 0.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+    }
+
+    .event-accordion-content.active {
+        margin-top: 0.5rem;
+    }
+
+    /* Q&A - compact on mobile */
+    .qa-item {
+        margin-bottom: 0.4rem;
+        border-radius: 8px;
+    }
+
+    .qa-question {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .qa-question i {
+        font-size: 0.75rem;
+    }
+
+    .qa-item.active .qa-answer {
+        max-height: 300px;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .qa-answer p {
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
     
-    /* Tournament Section */
+    /* Tournament Section - compact 2-column */
     .subsection-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .subsection-title i {
+        font-size: 0.9rem;
     }
     
     .tournament-text-box {
         grid-template-columns: 1fr;
+        gap: 0.4rem;
     }
     
     .tournament-item {
-        padding: var(--spacing-sm);
+        padding: 0.4rem 0.6rem;
+        border-left-width: 3px;
+        border-radius: 8px;
     }
     
     .tournament-name {
-        font-size: 1rem;
+        font-size: 0.95rem;
         display: block;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.1rem;
     }
     
     .tournament-date {
-        display: block;
-        margin-left: 0;
-        margin-bottom: 0.5rem;
+        display: inline;
+        margin-left: 0.2rem;
+        margin-bottom: 0;
+        font-size: 0.7rem;
     }
     
     .tournament-result {
-        font-size: 0.9rem;
-        line-height: 1.7;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-top: 0.15rem;
     }
     
     .result-item {
         display: block;
-        padding-left: 1rem;
+        padding-left: 0.8rem;
         position: relative;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.05rem;
         text-align: left;
     }
     
@@ -1370,6 +1599,10 @@ ul {
     .result-item::after {
         content: "";
         margin: 0;
+    }
+
+    .tournament-section {
+        margin-bottom: var(--spacing-md);
     }
     
     /* Form */

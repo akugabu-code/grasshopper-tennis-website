@@ -6,21 +6,24 @@
     <meta name="description" content="GrassHopperテニスサークルの公式サイト。新歓情報、活動紹介、Q&Aなど掲載中。初心者大歓迎！">
     <meta name="keywords" content="GrassHopper,テニスサークル,大学,新歓,初心者,テニス">
     
-    <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
     <title>GrassHopperテニスサークル | 新歓2026</title>
     
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://docs.google.com">
+    
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- GLightbox for image gallery -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260307013">
+    <link rel="stylesheet" href="assets/css/style.min.css?v=20260307025">
 </head>
 <body id="top">
     
@@ -55,11 +58,19 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
-            <h2>北大系テニスサークルGrassHopper</h2>
-            <p>一緒にテニスを楽しもう！初心者も経験者も大歓迎。</p>
+            <h2>2026北大系テニスサークルGrassHopper</h2>
+            <p>一緒にテニスを楽しもう！<br>初心者も経験者も大歓迎。</p>
             <div class="hero-buttons">
                 <a href="#apply" class="btn btn-outline btn-large">新歓イベント参加</a>
                 <a href="#join" class="btn btn-outline btn-large">入会申込</a>
+            </div>
+            <div class="hero-sns">
+                <a href="https://www.instagram.com/grasshopper2026official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="hero-sns-btn instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://lin.ee/Ztr9ATB" target="_blank" rel="noopener noreferrer" class="hero-sns-btn line">
+                    <i class="fab fa-line"></i> LINE
+                </a>
             </div>
         </div>
     </section>
@@ -75,7 +86,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>初心者大歓迎</h3>
-                    <p>部員の半数以上が初心者スタート！先輩が丁寧に教えるので安心です。</p>
+                    <p>大学からテニスを始めた部員も活躍中！経験者が丁寧にサポートするので安心です。</p>
                 </div>
                 <div class="about-card">
                     <div class="card-icon">
@@ -116,13 +127,15 @@
     <!-- Event Calendar Section -->
     <section id="calendar" class="section section-gray">
         <div class="container">
-            <h2 class="section-title">新歓イベントスケジュール</h2>
+            <h2 class="section-title">新歓イベントスケジュール <span class="adding-badge">続々追加中！</span></h2>
             <p class="section-subtitle">各イベントへの参加は下記の「新歓参加申込フォーム」からお申し込みください</p>
             
             <!-- Month Tabs -->
             <div class="month-tabs">
                 <button class="month-tab active" data-month="march">3月</button>
-                <button class="month-tab" data-month="april">4月</button>
+                <button class="month-tab" data-month="april-early">4/1〜10</button>
+                <button class="month-tab" data-month="april-mid">4/11〜20</button>
+                <button class="month-tab" data-month="april-late">4/21〜30</button>
             </div>
             
             <!-- March Events -->
@@ -130,6 +143,7 @@
                 <div class="calendar-grid">
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">3月</span>
                         <span class="day">27</span>
                     </div>
                     <div class="event-info">
@@ -140,6 +154,7 @@
                 </div>
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">3月</span>
                         <span class="day">28</span>
                     </div>
                     <div class="event-info">
@@ -150,6 +165,7 @@
                 </div>
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">3月</span>
                         <span class="day">30</span>
                     </div>
                     <div class="event-info">
@@ -161,11 +177,12 @@
                 </div>
             </div>
             
-            <!-- April Events -->
-            <div class="month-content" id="april-events">
+            <!-- April Early (1〜10日) -->
+            <div class="month-content" id="april-early-events">
                 <div class="calendar-grid">
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">4月</span>
                         <span class="day">8</span>
                     </div>
                     <div class="event-info">
@@ -174,8 +191,17 @@
                         <p><i class="fas fa-map-marker-alt"></i> フラワーテニスクラブ</p>
                     </div>
                 </div>
+                <!-- 4/1〜10のイベントをここに追加 -->
+                </div>
+                <p class="schedule-more-note"><i class="fas fa-plus-circle"></i> 順次追加予定！最新情報は Instagram・LINE をチェック</p>
+            </div>
+            
+            <!-- April Mid (11〜20日) -->
+            <div class="month-content" id="april-mid-events">
+                <div class="calendar-grid">
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">4月</span>
                         <span class="day">13</span>
                     </div>
                     <div class="event-info">
@@ -184,8 +210,17 @@
                         <p><i class="fas fa-map-marker-alt"></i> フラワーテニスクラブ</p>
                     </div>
                 </div>
+                <!-- 4/11〜20のイベントをここに追加 -->
+                </div>
+                <p class="schedule-more-note"><i class="fas fa-plus-circle"></i> 順次追加予定！最新情報は Instagram・LINE をチェック</p>
+            </div>
+            
+            <!-- April Late (21〜30日) -->
+            <div class="month-content" id="april-late-events">
+                <div class="calendar-grid">
                 <div class="event-card">
                     <div class="event-date">
+                        <span class="month">4月</span>
                         <span class="day">22</span>
                     </div>
                     <div class="event-info">
@@ -194,7 +229,9 @@
                         <p><i class="fas fa-map-marker-alt"></i> フラワーテニスクラブ</p>
                     </div>
                 </div>
+                <!-- 4/21〜30のイベントをここに追加 -->
                 </div>
+                <p class="schedule-more-note"><i class="fas fa-plus-circle"></i> 順次追加予定！最新情報は Instagram・LINE をチェック</p>
             </div>
         </div>
     </section>
@@ -203,8 +240,9 @@
     <section id="gallery" class="section">
         <div class="container">
             <h2 class="section-title">活動写真</h2>
-            <p class="section-subtitle">各月の活動をクリックして写真を見る</p>
+            <p class="section-subtitle">各月の活動をタップして写真を見る</p>
             
+            <div class="accordion-grid">
             <!-- 4月 新歓コンパ -->
             <div class="event-accordion">
                 <button class="event-accordion-btn">
@@ -334,11 +372,7 @@
                     </div>
                 </div>
             </div>
-                    </div>
-                </div>
-            </div>
-
-            </div>
+            </div><!-- /.accordion-grid -->
         </div>
     </section>
 
@@ -381,7 +415,7 @@
                     
                     <div class="tournament-item">
                         <p class="tournament-name">団体戦<span class="tournament-date">（2025年10月開催）</span></p>
-                        <p class="tournament-result"><strong>ベスト4</strong> - チーム一丸となって戦い抜き、見事ベスト4に進出しました！</p>
+                        <p class="tournament-result"><strong>ベスト4</strong> </p>
                     </div>
                 </div>
             </div>
@@ -422,7 +456,7 @@
             <h2 class="section-title">新歓参加申込フォーム</h2>
             <p class="section-subtitle">説明会や体験練習会への参加申込はこちら</p>
             <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-Qg7iQR8YPz80cUo2f0nEwpo_OZcv36Zk3RgEBuIdCufSuQ/viewform?embedded=true" width="100%" height="1986" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-Qg7iQR8YPz80cUo2f0nEwpo_OZcv36Zk3RgEBuIdCufSuQ/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">読み込んでいます…</iframe>
             </div>
         </div>
     </section>
@@ -436,7 +470,7 @@
                 <i class="fas fa-info-circle"></i> 説明会や体験練習会に参加された方が対象です。まだ新歓イベントに参加されていない方は、まず「新歓参加申込」からお申し込みください。
             </div>
             <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdP3-BASKdDWGMckd-fGiwmDxA50siMifXTegaTxHQ0N05yKw/viewform?embedded=true" width="100%" height="1594" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdP3-BASKdDWGMckd-fGiwmDxA50siMifXTegaTxHQ0N05yKw/viewform?embedded=true" width="100%" height="1594" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">読み込んでいます…</iframe>
 
             </div>
         </div>
@@ -466,7 +500,7 @@
             <h2 class="section-title">お問い合わせ</h2>
             <p class="section-subtitle">ご質問やご相談はこちらからお気軽にどうぞ</p>
             <div class="google-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfg3VhYJ9Cof8jEWskYKXG9VOCCOhwyVqoEuIOsnrsmujp2cg/viewform?embedded=true" width="100%" height="717" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfg3VhYJ9Cof8jEWskYKXG9VOCCOhwyVqoEuIOsnrsmujp2cg/viewform?embedded=true" width="100%" height="717" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">読み込んでいます…</iframe>
             </div>
         </div>
     </section>
@@ -512,7 +546,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js?v=20260307006"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" defer></script>
+    <script src="assets/js/main.min.js?v=20260307007" defer></script>
 </body>
 </html>
