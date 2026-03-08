@@ -98,19 +98,50 @@ ul {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
     text-decoration: none;
     transition: var(--transition);
 }
 
-.logo a:hover {
-    color: var(--primary-dark);
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo a:hover .logo-img {
+    transform: scale(1.07);
+    opacity: 0.9;
+}
+
+/* Section Divider Images */
+.section-divider {
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
+}
+
+.section-divider img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .section-divider img {
+        max-height: 160px;
+    }
 }
 
 .menu-toggle {
@@ -242,6 +273,10 @@ ul {
 
 .hero-sns-btn.instagram {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.hero-sns-btn.x-twitter {
+    background: #000;
 }
 
 .hero-sns-btn.line {
@@ -472,46 +507,46 @@ ul {
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
 }
 
 .event-date {
     background: var(--primary-color);
     color: var(--white);
-    padding: var(--spacing-sm);
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
+    min-width: 54px;
 }
 
 .event-date .month {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .event-date .day {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .event-info {
-    padding: var(--spacing-sm);
+    padding: 0.5rem 0.75rem;
     flex: 1;
 }
 
 .event-info h3 {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     color: var(--dark-color);
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .event-info p {
-    margin-bottom: 0.25rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.85rem;
 }
 
 .event-info p:last-child {
@@ -528,9 +563,20 @@ ul {
    ======================================== */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
+}
+
+.accordion-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+    padding: 0.6rem 1rem;
+    background: rgba(46, 204, 113, 0.08);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
 }
 
 .photo-grid a {
@@ -620,6 +666,19 @@ ul {
     margin-right: 0.3rem;
 }
 
+.calendar-apply-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.calendar-apply-cta .btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 /* Event Accordion Styles */
 .accordion-grid {
     display: grid;
@@ -688,10 +747,7 @@ ul {
    ======================================== */
 #tournament {
     position: relative;
-    background: 
-        linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-        url('../images/tournament-bg/1.jpg') center/cover no-repeat;
-    background-color: #f8f9fa;
+    background: #fff;
 }
 
 #tournament .container {
@@ -701,8 +757,8 @@ ul {
 
 #tournament .section-title,
 #tournament .section-subtitle {
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-dark);
+    text-shadow: none;
 }
 
 .tournament-section {
@@ -1196,7 +1252,7 @@ ul {
 }
 
 .social-btn.twitter {
-    background: #1da1f2;
+    background: #000;
     color: var(--white);
 }
 
@@ -1392,12 +1448,16 @@ ul {
     }
     
     .event-date {
-        min-width: 50px;
-        padding: 0.5rem;
+        min-width: 46px;
+        padding: 0.4rem;
     }
     
     .event-date .day {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .event-date .month {
+        font-size: 0.65rem;
     }
     
     .month-tabs {
@@ -1413,22 +1473,26 @@ ul {
         text-align: center;
     }
 
-    /* Event card compact */
     .event-card {
         border-radius: 8px;
     }
 
+    .event-info {
+        padding: 0.4rem 0.6rem;
+    }
+
     .event-info h3 {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .event-info p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     /* Photo Grid */
     .photo-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
     }
     
     /* Members Grid - 2 columns compact */

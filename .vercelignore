@@ -1,4 +1,5 @@
 image_backup_*/
+t-shirt_data/
 .git
 .gitignore
 compress-images.ps1
@@ -10,3 +11,4 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+assets/css/style.css
