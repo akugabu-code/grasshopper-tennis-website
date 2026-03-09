@@ -533,6 +533,16 @@ ul {
     font-weight: bold;
 }
 
+.event-date .weekday {
+    font-size: 0.7rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.event-date .weekday.sat {
+    color: #aee8ff;
+}
+
 .event-info {
     padding: 0.5rem 0.75rem;
     flex: 1;
@@ -563,7 +573,7 @@ ul {
    ======================================== */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
 }
@@ -1491,7 +1501,7 @@ ul {
     
     /* Photo Grid */
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 0.4rem;
     }
     
