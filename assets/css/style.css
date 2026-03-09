@@ -573,7 +573,7 @@ ul {
    ======================================== */
 .photo-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
 }
@@ -1501,7 +1501,7 @@ ul {
     
     /* Photo Grid */
     .photo-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.4rem;
     }
     
