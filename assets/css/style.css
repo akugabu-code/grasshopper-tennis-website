@@ -700,9 +700,6 @@ ul {
     margin-bottom: 0;
 }
 
-.event-accordion:has(.event-accordion-content.active) {
-}
-
 .event-accordion-btn {
     width: 100%;
     display: flex;
@@ -1556,9 +1553,6 @@ ul {
 
     .event-accordion {
         margin-bottom: 0;
-    }
-
-    .event-accordion:has(.event-accordion-content.active) {
     }
 
     .event-accordion-btn {
