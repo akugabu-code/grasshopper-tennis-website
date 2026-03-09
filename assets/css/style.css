@@ -691,8 +691,8 @@ ul {
 
 /* Event Accordion Styles */
 .accordion-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
 }
 
@@ -701,7 +701,6 @@ ul {
 }
 
 .event-accordion:has(.event-accordion-content.active) {
-    grid-column: 1 / -1;
 }
 
 .event-accordion-btn {
@@ -1550,8 +1549,8 @@ ul {
     
     /* Event Accordion - compact 2-column grid on mobile */
     .accordion-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 0.4rem;
     }
 
@@ -1560,7 +1559,6 @@ ul {
     }
 
     .event-accordion:has(.event-accordion-content.active) {
-        grid-column: 1 / -1;
     }
 
     .event-accordion-btn {
