@@ -27,11 +27,22 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# キャッシュ設定（静的アセット）
+# キャッシュ設定（静的アセット - CSS/JS）
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/css/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# キャッシュ設定（画像 - 1日キャッシュ、再検証あり）
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
 
 # HTML ファイルのキャッシュ設定
 [[headers]]

@@ -1,4 +1,9 @@
 // ========================================
+// Asset Version (bump this when images change)
+// ========================================
+const ASSET_VERSION = '20260310001';
+
+// ========================================
 // DOM Content Loaded Event
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -267,7 +272,7 @@ function renderMembers(membersData) {
         memberCard.className = 'member-card';
         
         const photoNumber = index + 1;
-        const imagePath = `assets/images/members/${photoNumber}.jpg`;
+        const imagePath = `assets/images/members/${photoNumber}.jpg?v=${ASSET_VERSION}`;
         
         // Member photo with lazy loading
         const photoDiv = document.createElement('div');
@@ -376,7 +381,7 @@ function initEventPhotos() {
         const eventName = grid.dataset.eventName || '';
         
         for (let i = 1; i <= maxPhotos; i++) {
-            const imagePath = `assets/images/events/${month}/${i}.jpg`;
+            const imagePath = `assets/images/events/${month}/${i}.jpg?v=${ASSET_VERSION}`;
             
             const link = document.createElement('a');
             link.href = imagePath;
