@@ -1,7 +1,7 @@
 // ========================================
 // Asset Version (bump this when images change)
 // ========================================
-const ASSET_VERSION = '20260310005';
+const ASSET_VERSION = '20260310006';
 
 // ========================================
 // DOM Content Loaded Event
